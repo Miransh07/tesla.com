@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+input, button{
+    outline: none;
+}
+#menu,#menuhide{
+    display: none;
+}
+#menu:checked~.container{
+    filter: blur(3px);
+}
+#menu:checked~ .sidemenu{
+    width: 250px;
+}
+#menu:checked~.sidemenu ul{
+    display: block;
+}
+.container{
+    height:100%;
+    background: url("image/Model_S.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    transition: filter 300ms;
+    position: absolute;
+    width: 100%;
+    z-index: 34;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    z-index: 34;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin: 3px 0px 0px 30px;
+}
+span img{
+    width: 130px;
+}
+.start{
+    margin-top: 13px;
+}
+.start ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1rem;
+    padding: 3px 3px;
+}
+#navbar ul li a{
+    color: black;
+    padding: 10px 13px;
+    text-decoration: none;
+    border-top-right-radius: 13px;
+    border-end-start-radius: 13px;
+    z-index: 2;
+}
+#navbar ul li a:hover{
+    background-color: rgba(205, 214, 219, 0.72);
+    transition-duration: 1s;
+}
+.End {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 30px;
+}
+.End a{
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 13px;
+    text-decoration: none;
+    border-top-right-radius: 13px;
+    border-end-start-radius: 13px;
+}
+.menu{
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 13px;
+    text-decoration: none;
+    border-top-right-radius: 13px;
+    border-end-start-radius: 13px;
+}
+.End a:hover{
+    background-color: rgba(205, 214, 219, 0.72);
+    transition-duration: 1s;
+}
+.menu:hover{
+    background-color: rgba(205, 214, 219, 0.72);
+    transition-duration: 1s;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:0px 20px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(17, 17, 17);
+}
+.h-primary{
+    font-size: 2.5rem;
+}
+#home a{
+    color: rgb(17, 17, 17);
+}
+#inside{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.btn1{
+    padding: 10px 70px 10px 70px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 20px;
+    opacity: .6;
+    margin: 0px 10px 0px 0px;
+}
+.btn2{
+    padding: 10px 54px 10px 54px;
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+    border: 0px;
+    border-radius: 20px;
+    opacity: .7;
+    color: black;
+    margin: 0px 0px 0px 10px;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(199, 199, 199);
+    padding-right: 10px;
+    border-radius: 10px;
+}
+.sidemenu{
+    z-index: 35;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 0px;
+    height: 100%;
+    transition: width 300ms;
+    overflow: auto;
+}
+
+.sidemenu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 65px 35px 0px 25px;
+    display: none;
+}
+.hide_btn{
+    display: none;
+}
+.sidemenu ul li{
+    text-decoration: none;
+    padding: 5px 0px 0px 10px;
+    margin-top: 10px;
+    font-size: .9rem;
+    width: 190px;
+}
+.Us{
+    display: flex;
+    flex-direction: column;
+}
+.English{
+    margin-top: 3px;
+    color: rgb(84, 84, 84);
+    font-size: .8rem;
+}
+.English:hover{
+    text-decoration: underline;
+    color: black;
+}
+.sidemenu ul li:hover{
+    background-color: rgb(224, 239, 253);
+    cursor: pointer;
+}
+footer{
+    padding: 50px;
+}
+@media only screen and (max-width: 1200px){
+    .start, .End li a{
+        display: none;
+    }
+    .btn2{
+        margin: 10px 0px 0px 0px;
+    }
+    .sec_2{
+        margin-top: 0px;
+    }
+    #menu:checked ~ .sidemenu .hide_btn{
+        display: block;
+    }
+    .menu{
+        background-color: rgba(205, 214, 219, 0.72);
+    }
+    .btn1{
+        padding: 0px 70px 0px 70px;
+    }
+}
